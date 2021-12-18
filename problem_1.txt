@@ -1,0 +1,6 @@
+- The approach I used here is to take the range from 1 to (number // 2) and see which of (i) will equals (number) when mutiplied by itself (i * i)
+- Because the square root for any number can not be bigger than its half, There was no need to loop over the numbers that are bigger than (number // 2)
+- My only concernce was "Should I loop from 1 to (mid) or from (mid) to 1 ?" I couldn't find a way to know which one is better when it comes to time complexity so I just left it on from 1 to (mid)
+- I used this approach cause it seemed the best one when it comes to time complexity
+- Time complexity is O(log(n))
+- Space complexity is O(1)

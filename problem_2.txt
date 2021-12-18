@@ -1,0 +1,6 @@
+- Because we are searching a rotated array. This means we can search using the same methods for a sorted array by just taking negetive indexes into account
+- I just need to start at index = 0 and raise or lower the index to find the intended value
+- I used this method cause I won't need to do any prepration for it before starting to search the array
+- As a result it gives a better time complexity than other methods
+- Time Complexity is O(log(n))
+- Space Complexity is O(1)

@@ -1,0 +1,5 @@
+- I used this approach cause it lets me handle all the elements in the array in an easy to read & to use format
+- Because we are looking for the biggest 2 numbers. I need to make the biggest digit on the right, and the smallest on the left. While watching out for the length of (num1) and (num2)
+- I used this method cause its cuts off the time complexity needed for sorting the array or sorting (num1) and (num2).
+- Time complexity is O(nlog(n))
+- Space complexity is O(n)

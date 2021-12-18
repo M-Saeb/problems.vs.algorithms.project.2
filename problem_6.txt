@@ -1,0 +1,4 @@
+- Because we are dealing with an unstorted array, there is no trick we can follow to cut the time complexity here
+- The only thing we can do is to loop over all the elements while searching for both the smallest and biggest item in the array
+- Time complexity is O(n)
+- Space complexity is O(1)

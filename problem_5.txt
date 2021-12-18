@@ -1,0 +1,13 @@
+- This one I followed the pratice I learned for the Trie Sorting
+- I followed this method cause it is the best method I know when it comes to handling spell check
+- I used the same appoach I learned in Leason 1 for this chapter
+- The Time complexity:
+- - for Trie.insert() it's O(n)
+- - for Trie.find() it's O(1)
+- - for TriNode.insert() it's O(1)
+- - for TriNode.suffixes() it's O(s). s as in space of the Tries Tree
+- The Space Complexity:
+- - for Trie.insert() it's O(1)
+- - for Trie.find() it's O(1)
+- - for TriNode.insert() it's O(1)
+- - for TriNode.suffixes() it's O(nlog(n))
