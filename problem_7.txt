@@ -1,14 +1,22 @@
-- The functions that were need for this problem were Tries Tree funtions so I centered them around the RouteTrie class
+- The functions that were needed for this problem were Tries Tree funtions so I centered them around the RouteTrie class
 - I created _splitter() to handle spliting the input string in its needed format
 - Both of RouteTrie.insert() and RouteTrie.find() follows a direct approach of starting from the root path, and slowly going down the path from there
-- I used thi approach cause it is the fastest one possible to reach the required output
+- I used this approach cause it is the fastest one possible to reach the required output
 - The Time Complexity:
+- - for RouteTrieNode.__init__ it's O(1)
+- - for RouteTrie.__init__ it's O(1)
 - - for RouteTrie.insert() it's O(n)
 - - for RouteTrie.find() it's O(n)
+- - for RouteTrie._splitter() it's O(1)
+- - for Router.__init__ it's O(1)
 - - for Router.add_handler() it's O(n)
 - - for Router.lookup() it's O(n)
 - The Space Complexity:
+- - for RouteTrieNode.__init__ it's O(1)
+- - for RouteTrie.__init__ it's O(1)
 - - for RouteTrie.insert() it's O(1)
+- - for RouteTrie._splitter() it's O(1)
 - - for RouteTrie.find() it's O(1)
+- - for Router.__init__ it's O(1)
 - - for Router.add_handler() it's O(1)
 - - for Router.lookup() it's O(1)
