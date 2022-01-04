@@ -1,5 +1,43 @@
-- I used this approach cause it lets me handle all the elements in the array in an easy to read & to use format
-- Because we are looking for the biggest 2 numbers. I need to make the biggest digit on the right, and the smallest on the left. While watching out for the length of (num1) and (num2)
-- I used this method cause its cuts off the time complexity needed for sorting the array or sorting (num1) and (num2).
+Desgin
+- Because we are looking for the biggest 2 numbers from a list of digits. I need to arrange the biggest digit on the right, and the smallest on the left. While watching out for the length of (num1) and (num2)
+
+- EX list a = [9, 8, 1, 7, 3, 3] The biggest possible 2 numbers are (b) 973 and (c) 831
+- - first, I created a list mapper that have 0 values from index 0 to 9
+- - than, for each digits in list (a), I added plus 1 for its equivalent index in list_mapper 
+- - a more detailed description below:
+- - list_mapper intial values 			[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- - list_mapper indexes 				[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+- - list_mapper for list (a) will be 	[0, 1, 0, 2, 0, 0, 0, 1, 1, 1]
+- - other examples below
+- - the list mapper for list [8, 6 ,8, 3] will be [0, 0, 0, 1, 0, 0, 1, 0, 2, 0]
+- - the list mapper for list    [9, 0, 2] will be [1, 0, 1, 0, 0, 0, 0, 0, 0, 1]
+- - the list mapper for list [7, 3, 7, 4] will be [0, 0, 0, 1, 1, 0, 0, 2, 0, 0]
+
+- now I just need to start going through the list_mapper for list(a) from index 9 (biggest value) and than go down
+- - because index 9 has a value >0, we add its index value to (b), now b=9, than we subract 1 from index 9
+- - now the value of index 9 equals 0 so we move to the next index
+- - because index 8 has value >0 and (length of (b) > length of (c)), we add its index value to (c), now b=9 and c=8, than we subract 1 from index 8
+- - now the value of index 8 equals 0 so we move to the next index
+- - we repeat the same thing for index 7, so now b=97 and c=8, subract 1 from index 7 move to index 6
+- - because index 6 value is 0, we skip it
+- - we also skip indexes 5 and 4 because they have a value of 0,
+- - for index 3, we add its index value to (c) because (length of (b) > length of (c)), now b=97 and c=83, than we subract 1 from index 3
+- - index 3 still has a value of 1, so we add it to (b), now we have b=973 and c=83, than we subract 1 from index 3
+- - we skip index 2 cause its value is 0
+- - index 1 has a value >0, we add it to (c) and get the following b=973 and c=831, than we subract 1 from index 1
+- - now all items in list_mapper equals 0, so we've use all the digits from list (a)
+- - the final 2 values are b=973 and c=831
+
+- I don't know if this algorithm already exist, but I came up with it while thinking of a solution for this issue
+
+- I used this approach because it skips the time & space needed for sorting the input list, and its easy to read once you've understand it
+
+- as for the data structor, I made the list_maper a list of 0's because it is the most effiecnt type of data for this approach
+
+
+Time Complexity
 - Time complexity is O(nlog(n))
+
+
+Space Complexity
 - Space complexity is O(n)

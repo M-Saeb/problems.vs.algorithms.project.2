@@ -1,6 +1,30 @@
+Design
 - Because we are searching a rotated array. This means we can search using the same methods for a sorted array by just taking negetive indexes into account
+
+- EX: list a = [4, 5, 1, 2, 3]
+- - index 0 will give me the value of 4
+- - index -1 will give the value of 3
+- -  index 1 will give me the value of 5
+
 - I just need to start at index = 0 and raise or lower the index to find the intended value
+
+- EX: for the list a above
+- - if was search for number 2
+- - I'll start at index 0 which returns the value 4, because 4 > 2, I just need to lower the index to -1
+- - now I have index -1 which returns the value 3, lower the index again
+- - now I have index -2 which returns the value 2, which the saerched value
+- - now I just need to convert the index to its posotive value (length of the list - the negetive index) (EX: 5 - 2) which will return 3
+
 - I used this method cause I won't need to do any prepration for it before starting to search the array
-- As a result it gives a better time complexity than other methods
-- Time Complexity is O(log(n))
+
+- I didn't use a specific algorithms here cause I didn't need to
+
+- As for the data structor, I only needed a integer variable for the index
+
+
+Time Complexity
+- Time Complexity is O(n)
+
+
+Space Complexity
 - Space Complexity is O(1)

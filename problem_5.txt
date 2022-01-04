@@ -1,17 +1,30 @@
-- This one I followed the pratice I learned for the Trie Sorting
-- I followed this method cause it is the best method I know when it comes to handling spell check
-- I used the same appoach I learned in Leason 1 for this chapter
-- The Time complexity:
-- - for Trie.__init__ it's O(1)
-- - for Trie.insert() it's O(n)
-- - for Trie.find() it's O(1)
-- - for TriNode.__init__ it's O(1)
-- - for TriNode.insert() it's O(1)
-- - for TriNode.suffixes() it's O(s). s as in space of the Tries Tree
-- The Space Complexity:
-- - for Trie.__init__ it's O(1)
-- - for Trie.insert() it's O(1)
-- - for Trie.find() it's O(1)
-- - for TriNode.__init__ it's O(1)
-- - for TriNode.insert() it's O(1)
-- - for TriNode.suffixes() it's O(nlog(n))
+Design
+- For this one I followed the pratice I learned for the Trie Sorting, cuase it is the best choice for spell checking and sugesting words
+
+- I built a TriNode class which only contain 2 variables and 1 method
+- - (is_word) which is a boolean to return wether the current input string is registered as a word or not
+- - (children) which is a dictionary that its keys are children letter and its values are other TriNode'
+- - suffixes() a function that return all the possible words from the entered suffix (input)
+- - - it work as recursive function that takes the current TriNode, does down the children variable, and return all possible suffixes from the chilren TriNode
+- I built a Tri Class which contain 1 variable and 2 methods
+- - (root) which is the TriNode that is the root of the Tri Tree and where all the registers word/children will be
+- - insert() a method that adds the word entered from the input variable to the Tri Tree in the root variable
+- - find() a method that returns the TriNode for the searched prefix, if found
+
+- The dat structor I used is the same data structor I learned in the leasons, a root node with children nodes
+
+
+Time Complexity
+- for Trie.__init__ it's O(1)
+- for Trie.insert() it's O(n)
+- for Trie.find() it's O(1)
+- for TriNode.__init__ it's O(1)
+- for TriNode.suffixes() it's O(s). s as in space of the Tries Tree
+
+
+Space Complexity
+- for Trie.__init__ it's O(1)
+- for Trie.insert() it's O(1)
+- for Trie.find() it's O(1)
+- for TriNode.__init__ it's O(1)
+- for TriNode.suffixes() it's O(nlog(n))

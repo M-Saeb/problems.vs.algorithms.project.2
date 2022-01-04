@@ -1,3 +1,12 @@
-- I used this method cause I just need to sort the 0's and the 2's. Which cuts off the time complexity needed in other methods
+Design
+- I used the algorithm I learned in Leason 2, Chapter 15
+- The idea is to put 0 and 2 in their correct positions, which will make sure all the 1s are automatically placed in their right positions
+- The data structor I used are 2 points, one for 0's and one for 2's
+
+
+Time Complexity
 - Time complexity is O(n)
+
+
+Space Complexity
 - Space complexity is O(n)

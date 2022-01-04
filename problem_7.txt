@@ -1,22 +1,46 @@
+Design
+- The data structor that'll need for the pages path is the same strcutor I'll need for the spell check so I used a Trie Hashmap
+
+- I created RouteTrieNode class which has 2 variable:
+- - value which the page content (handler)
+- - children which is dictionary that contain the children nodes for the current one 
+
+- I created RouteTrie class which has 1 variable and 3 methods:
+- - root which is the root RouteTrieNode for Trie Hashmap
+- - insert() method which creates a new page and handler for the root Hashmap
+- - find() method which returns the page (handler) for the searched page if existed
+- - _splitter() method which format the input's page path in its needed format
+- - - I made it a seperate function cause it is need in both insert() and find() 
+
+- I created Router class which has 2 variables and 2 methods, this class is to run the RouteTrie tree and handle any expcetions that may occure
+- - routeTri which contain the RouteTrie Tree
+- - fail_msg which contain the returned string for pages that are not found
+- - add_handler() which runs routeTri.insert() method
+- - lookup() which runs routeTri.find() method and retun the fail_msg if not found
+
 - The functions that were needed for this problem were Tries Tree funtions so I centered them around the RouteTrie class
 - I created _splitter() to handle spliting the input string in its needed format
 - Both of RouteTrie.insert() and RouteTrie.find() follows a direct approach of starting from the root path, and slowly going down the path from there
 - I used this approach cause it is the fastest one possible to reach the required output
-- The Time Complexity:
-- - for RouteTrieNode.__init__ it's O(1)
-- - for RouteTrie.__init__ it's O(1)
-- - for RouteTrie.insert() it's O(n)
-- - for RouteTrie.find() it's O(n)
-- - for RouteTrie._splitter() it's O(1)
-- - for Router.__init__ it's O(1)
-- - for Router.add_handler() it's O(n)
-- - for Router.lookup() it's O(n)
-- The Space Complexity:
-- - for RouteTrieNode.__init__ it's O(1)
-- - for RouteTrie.__init__ it's O(1)
-- - for RouteTrie.insert() it's O(1)
-- - for RouteTrie._splitter() it's O(1)
-- - for RouteTrie.find() it's O(1)
-- - for Router.__init__ it's O(1)
-- - for Router.add_handler() it's O(1)
-- - for Router.lookup() it's O(1)
+
+
+Time Complexity
+- for RouteTrieNode.__init__ it's O(1)
+- for RouteTrie.__init__ it's O(1)
+- for RouteTrie.insert() it's O(n)
+- for RouteTrie.find() it's O(n)
+- for RouteTrie._splitter() it's O(1)
+- for Router.__init__ it's O(1)
+- for Router.add_handler() it's O(n)
+- for Router.lookup() it's O(n)
+
+
+Space Complexity
+- for RouteTrieNode.__init__ it's O(1)
+- for RouteTrie.__init__ it's O(1)
+- for RouteTrie.insert() it's O(1)
+- for RouteTrie._splitter() it's O(1)
+- for RouteTrie.find() it's O(1)
+- for Router.__init__ it's O(1)
+- for Router.add_handler() it's O(1)
+- for Router.lookup() it's O(1)

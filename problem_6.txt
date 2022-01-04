@@ -1,4 +1,14 @@
+Design
 - Because we are dealing with an unstorted array, there is no trick we can follow to cut the time complexity here
 - The only thing we can do is to loop over all the elements while searching for both the smallest and biggest item in the array
+- I started by setting the first item as both the biggest and smallest of the list, than loop over the other items and change accordingly
+- I didn't use any algorithm for this problem cause I didn't need to
+- The data structor I used is only the min & max variables and these are just inegers
+
+
+Time Complexity
 - Time complexity is O(n)
+
+
+Space Complexity
 - Space complexity is O(1)
