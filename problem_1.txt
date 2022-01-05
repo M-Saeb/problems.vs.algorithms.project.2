@@ -21,4 +21,4 @@ Time Complexity
 
 
 Space Complexity
-- Space complexity is O(n)
+- Space complexity is O(1)
